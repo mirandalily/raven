@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "application#home"
+  root "application#angular"
+  resources :organizations
 end
