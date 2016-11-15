@@ -8,48 +8,38 @@ angular
         controller: 'HomeController as ctrl'
       })
       .state('home.organizations', {
-        url: '/organizations',
+        url: 'organizations',
         templateUrl: 'organizations/index.html',
         controller: 'OrganizationsController as ctrl'
       })
-      .state('home.new_organization', {
-        url: '/new',
-        parent: 'home',
+      .state('home.new', {
+        url: 'organizations/new',
         template: 'organizations/new.html',
         controller: 'NewOrganizationController as ctrl'
       })
-      .state('home.show_organization', {
-        url: '/show/:id',
-        parent: 'home',
+      .state('home.show', {
+        url: 'organizations/:id',
         templateUrl: 'organizations/show.html',
         controller: 'ShowOrganizationController as ctrl'
       })
-      .state('login', {
-        url: '/login',
+      .state('home.login', {
+        url: 'login',
         templateUrl: 'authorization/login.html',
-        controller: 'AuthController as ctrl',
-        onEnter: ['$state', 'Auth', function($state, Auth) {
+        controller: 'AuthController',
+        onEnter: function($state, Auth) {
           Auth.currentUser().then(function() {
             $state.go('home.organizations')
-          })
-        }]
+          });
+        }
       })
-      .state('signup', {
-        url: '/signup',
-        templateUrl: 'authorization/signup.html',
-        controller: 'AuthController as ctrl',
-        onEnter: ['$state', 'Auth', function($state, Auth) {
+      .state('home.register', {
+        url: 'register',
+        templateUrl: 'authorization/register.html',
+        controller: 'AuthController',
+        onEnter: function($state, Auth) {
           Auth.currentUser().then(function() {
             $state.go('home.organizations')
-          })
-        }]
-      })
-      .state('logout', {
-        url: '/logout',
-        controller: function($state, Auth) {
-          Auth.logout().then(function(user) {
-            $state.go('login');
-          })
+          });
         }
       });
       $urlRouterProvider.otherwise('/');
