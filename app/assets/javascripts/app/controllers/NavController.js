@@ -1,4 +1,4 @@
-function NavController($state, $scope, Auth) {
+function NavController($scope, Auth) {
 
   $scope.signedIn = Auth.isAuthenticated;
   $scope.logout = Auth.logout;
@@ -19,7 +19,7 @@ function NavController($state, $scope, Auth) {
     $scope.$on('devise:new-registration', function (e, user){
       $scope.user = user;
     });
-    
+
 }
 
 angular
