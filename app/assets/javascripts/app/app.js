@@ -14,7 +14,7 @@ angular
       })
       .state('home.new', {
         url: 'organizations/new',
-        template: 'organizations/new.html',
+        templateUrl: 'organizations/new.html',
         controller: 'NewOrganizationController as ctrl'
       })
       .state('home.show', {
