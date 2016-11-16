@@ -3,7 +3,7 @@ function NavController($scope, Auth) {
   $scope.signedIn = Auth.isAuthenticated;
   $scope.logout = Auth.logout;
 
-  Auth.currentUiser()
+  Auth.currentUser()
     .then(function(user) {
       $scope.user = user;
     });
