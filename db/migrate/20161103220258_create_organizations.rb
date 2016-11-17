@@ -5,6 +5,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :description
       t.boolean :volunteers
       t.string :address
+      t.integer :user_id
 
       t.timestamps null: false
     end
