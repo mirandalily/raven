@@ -1,4 +1,6 @@
-function NewOrganization(OrganizationService, $location, Auth, $controller) {
+function NewOrganization(OrganizationService, $stateParams, Auth, $scope) {
+
+
   var ctrl = this;
 
   ctrl.organization = new OrganizationService();

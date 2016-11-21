@@ -1,9 +1,13 @@
-function OrganizationService($resource) {
+function OrganizationService($http) {
 
-  var organization = $resource('http://localhost:3000/api/v1/organization/:id.json', {id: '@id'},
-    { update: { method: 'PUT' }
-  });
-  return organization;
+  this.getOrganizations = function() {
+    return $http.get('http://localhost:3000/organizations.json');
+  }
+
+  this.getOrganization = function(id) {
+    return $http.get('http://localhost:3000/organizations/' + id + '.json')''
+  }
+
 }
 
 angular

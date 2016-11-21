@@ -1,14 +1,8 @@
-function OrganizationController(OrganizationService, $location, $state, Auth, $controller) {
-  var ctrl = this;
+function OrganizationController(organizations) {
 
-  ctrl.signedIn = Auth.isAuthenticated;
+  this.organizations = organizations.data
 
-  Auth.currentUser()
-    .then(function(user){
-      ctrl.user = user;
-    });
 
-    ctrl.organizations = OrganizationService.query();
 }
 
 angular
