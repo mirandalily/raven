@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <h1>{{ ctrl.organization.name }}</h1>
+        <h4>{{ ctrl.organization.address }}</h4>
+        <h5>{{ ctrl.organization.description }}</h5>
+
+        <button ng-if="ctrl.user.id === ctrl.organization.user_id" class="btn btn-primary" href="" ui-sref="home.edit({id: ctrl.organization.id})">Edit Organization</button>
+        <button ng-if="ctrl.user.id === ctrl.organization.user_id" class="btn btn-primary" href="" ng-click="ctrl.deleteOrganization(ctrl.organization);">Delete Organization</button>
+
+      </div>
+    </div>
+  </div>
+</div>

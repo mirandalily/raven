@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Edit Organization</h1>
+        <form name="form" ng-submit="ctrl.editOrganization()">
+
+          <div class='form-group'>
+            <label>Organization Name</label>
+            <input name='name' type='text' class='form-control' ng-model='ctrl.organization.name' required='required'/>
+          </div>
+
+          <div class='form-group'>
+            <label>Organization Description</label>
+            <input name='description' type='text' class='form-control' ng-model='ctrl.organization.description' required='required'/>
+          </div>
+
+          <div class='form-group'>
+            <label>Organization Address</label>
+            <input name='name' type='text' class='form-control' ng-model='ctrl.organization.name' required='required'/>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Edit Recipe</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
