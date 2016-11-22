@@ -1,4 +1,4 @@
-function OrganizationsController(OrganizationService, $location, $state, Auth, $controller)) {
+function OrganizationsController(OrganizationService, $location, $state, Auth, $controller) {
 
   var ctrl = this;
 
@@ -9,7 +9,7 @@ function OrganizationsController(OrganizationService, $location, $state, Auth, $
       ctrl.user = user;
     });
 
-  this.organizations = OrganizationService.query();
+  ctrl.organizations = OrganizationService.query();
 
 }
 
