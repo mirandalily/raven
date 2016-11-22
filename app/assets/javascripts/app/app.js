@@ -13,7 +13,7 @@ angular
         controller: 'OrganizationsController as ctrl'
       })
       .state('home.new', {
-        url: 'organizations/:id/new',
+        url: 'organizations/new',
         templateUrl: 'organizations/_new.html',
         controller: 'NewOrganizationController as ctrl'
       })

@@ -3,7 +3,25 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1>Add Organization</h1>
-        <form name="form" ng-submit="ctrl.submit()">
+        <form name="form" ng-submit="ctrl.addOrganization()">
+          <div class='form-group'>
+            <label>Organization Name</label>
+            <input name='name' type='text' class='form-control' ng-model='ctrl.organization.name' required='required'/>
+          </div>
+
+          <div class='form-group'>
+            <label>Organization Description</label>
+            <input name='description' type='text' class='form-control' ng-model='ctrl.organization.description' required='required'/>
+          </div>
+
+          <div class='form-group'>
+            <label>Organization Address</label>
+            <input name='name' type='text' class='form-control' ng-model='ctrl.organization.name' required='required'/>
+          </div>
+
+          <div class='form-group'>
+            <button class='btn btn-primary' type='submit'>Create Organization</button>
+          </div>
 
         </form>
       </div>

@@ -1,16 +1,15 @@
-function NewOrganization(OrganizationService, $stateParams, Auth, $scope) {
+function NewOrganizationController(OrganizationService, $stateParams, Auth, $scope) {
 
-  Auth.currentUser().then(function(user) {
-    $scope.user = user;
-    this.user = user
-  })
+  var ctrl = this;
 
-  this.organization_id = parseInt($stateParams.id);
+  ctrl.organization = new OrganizationService();
 
-  this.submit = function() {
-    OrganizationService.createOrganization(this.organizations);
-    alert('successfully created organization')
-  }
+  ctrl.addOrganization = function() {
+    ctrl.organization.$save(function() {
+      $location.path('organizations');
+    });
+  };
+
 }
 
 angular
