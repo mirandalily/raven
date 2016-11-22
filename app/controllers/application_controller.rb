@@ -2,9 +2,19 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  skip_before_action :verify_authenticity_token
+  before_action :configure_permitted_params, if: :devise_controller?
+
   respond_to :json
 
   def angular
     render 'layouts/application'
   end
+
+  private
+  
+  def configure_permitted_params
+    devise_parameter_sanitizer.for(:sign_up) << :username
+  end
+
 end
