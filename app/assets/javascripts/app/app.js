@@ -19,8 +19,13 @@ angular
       })
       .state('home.show', {
         url: 'organizations/:id',
-        templateUrl: 'organizations/show.html',
+        templateUrl: 'organizations/_show.html',
         controller: 'ShowOrganizationController as ctrl'
+      })
+      .state('home.edit', {
+        url: 'organizations/:id/edit',
+        templateUrl: 'organizations/_edit.html',
+        controller: 'EditOrganizationController as ctrl'
       })
       .state('home.login', {
         url: 'login',
@@ -28,7 +33,7 @@ angular
         controller: 'AuthController',
         onEnter: function($state, Auth) {
           Auth.currentUser().then(function() {
-            $state.go('home.organizations')
+            $state.go('home')
           });
         }
       })
@@ -38,7 +43,7 @@ angular
         controller: 'AuthController',
         onEnter: function($state, Auth) {
           Auth.currentUser().then(function() {
-            $state.go('home.organizations')
+            $state.go('home')
           });
         }
       });
