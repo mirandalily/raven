@@ -9,12 +9,12 @@ angular
       })
       .state('home.organizations', {
         url: 'organizations',
-        templateUrl: 'organizations/index.html',
+        templateUrl: 'organizations/_organizations.html',
         controller: 'OrganizationsController as ctrl'
       })
       .state('home.new', {
-        url: 'organizations/new',
-        templateUrl: 'organizations/new.html',
+        url: 'organizations/:id/new',
+        templateUrl: 'organizations/_new.html',
         controller: 'NewOrganizationController as ctrl'
       })
       .state('home.show', {

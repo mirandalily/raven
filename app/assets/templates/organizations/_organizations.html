@@ -1,0 +1,10 @@
+<div class='container'>
+  <h1>Organizations</h1>
+  <tbody>
+    <tr ng-repeat='organization in ctrl.organizations'>
+      <td>
+        <a href="#" ui-sref="home.organiztion({id: organization.id})">{{ organization.name }}</a>
+      </td>
+    </tr>
+  </tbody>
+</div>
