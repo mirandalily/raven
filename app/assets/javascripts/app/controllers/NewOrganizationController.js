@@ -5,9 +5,13 @@ function NewOrganizationController(OrganizationService, $stateParams, Auth, $sco
   ctrl.organization = new OrganizationService();
 
   ctrl.addOrganization = function() {
-    ctrl.organization.$save(function() {
-      $location.path('organizations');
-    });
+    if (Auth.isAuthenticated()) {
+      ctrl.organization.$save(function() {
+        $location.path('organizations');
+      });
+    } else {
+      alert('oops');
+    };
   };
 
 }
