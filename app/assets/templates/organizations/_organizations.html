@@ -2,13 +2,8 @@
   <h1>Organizations</h1>
   <div ng-repeat='organization in ctrl.organizations'>
     <h1>{{ organization.name }}</h1>
+    {{organization.description}}
+    {{organization.address}}
   </div>
-  <table>
-    <tr ng-repeat="organization in ctrl.organizations">
-      <td><a href="#" ui-sref="home.organization({id: organization.id})">{{ organization.name }}</a></td>
-      <td>{{ organization.address }}</td>
-      <td>{{ organization.description }}</td>
-    </tr>
-  </table>
 
 </div>

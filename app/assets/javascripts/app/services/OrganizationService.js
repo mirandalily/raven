@@ -1,13 +1,14 @@
 function OrganizationService($http) {
+  
+  var service = {}
 
-  var organization = $http('http://localhost:3000/organizations/:id.json', {id: '@id'},
-    {update: {method: 'PUT'}
-  });
+    service.getOrganizations = function() {
+      return $http({method: 'GET', url: '/organizations'})
+    }
 
-  return organization;
-
+    return service;
 }
 
 angular
-  .module('app')
-  .factory('OrganizationService', OrganizationService)
+   .module('app')
+   .service('OrganizationService', OrganizationService);
