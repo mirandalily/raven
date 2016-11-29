@@ -1,12 +1,12 @@
 function OrganizationService($http) {
-  
+
   var service = {}
 
-    service.getOrganizations = function() {
-      return $http({method: 'GET', url: '/organizations'})
-    }
+  service.getOrganizations = function() {
+    return $http({method: 'GET', url: '/organizations'})
+  }
+  return service;
 
-    return service;
 }
 
 angular

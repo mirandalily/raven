@@ -1,4 +1,4 @@
-function NewOrganizationController(OrganizationService, $stateParams, Auth, $scope) {
+function NewOrganizationController(OrganizationService, $location, Auth, $controller){
 
   var ctrl = this;
 
@@ -13,6 +13,7 @@ function NewOrganizationController(OrganizationService, $stateParams, Auth, $sco
       alert('oops');
     };
   };
+
 
 }
 
