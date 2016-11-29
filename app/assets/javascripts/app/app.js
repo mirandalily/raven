@@ -11,6 +11,11 @@ angular
         url: 'organizations',
         templateUrl: 'organizations/_organizations.html',
         controller: 'OrganizationsController as ctrl',
+        resolve: {
+          organizations: function(OrganizationService) {
+            return OrganizationService.getOrganizations();
+          }
+        }
       })
       .state('home.new', {
         url: 'organizations/new',
