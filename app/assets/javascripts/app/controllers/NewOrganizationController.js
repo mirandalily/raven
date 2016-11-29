@@ -1,18 +1,23 @@
-function NewOrganizationController(OrganizationService, $location, Auth, $controller){
+function NewOrganizationController(OrganizationService, $state, $location, Auth, $controller){
 
   var ctrl = this;
 
-  ctrl.organization = new OrganizationService();
+  Auth.currentUser().then(function(user) {
+    ctrl.user = user;
+  })
 
   ctrl.addOrganization = function() {
-    if (Auth.isAuthenticated()) {
-      ctrl.organization.$save(function() {
-        $location.path('organizations');
-      });
-    } else {
-      alert('oops');
-    };
-  };
+	    var data = {
+	    	name: this.name,
+	    	description: this.description,
+	    	address: this.address,
+	    };
+
+	    OrganizationService.createOrganization(data);
+	    $state.go('home.organizations');
+	  };
+
+
 
 
 }
