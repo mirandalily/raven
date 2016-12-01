@@ -28,7 +28,7 @@ angular
         controller: 'ShowOrganizationController as ctrl'
       })
       .state('home.edit', {
-        url: 'organizations/:id/edit',
+        url: 'organization/:id/edit',
         templateUrl: 'organizations/_edit.html',
         controller: 'EditOrganizationController as ctrl'
       })

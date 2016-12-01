@@ -12,6 +12,7 @@ function NewOrganizationController(OrganizationService, $state, $scope, Auth, $c
             name: ctrl.organization.name,
             description: ctrl.organization.description,
             address: ctrl.organization.address,
+						id: ctrl.organization.id
         };
         console.log(data)
 

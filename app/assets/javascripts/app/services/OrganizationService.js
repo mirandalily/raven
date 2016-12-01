@@ -1,22 +1,17 @@
 function OrganizationService($http) {
 
-  var service = {}
+  this.getOrganizations = function() {
+    return $http.get('http://localhost:3000/organizations/')
+  };
 
-  service.getOrganizations = function() {
-    return $http({method: 'GET', url: '/organizations'})
-  }
+  this.getOrganization = function(id) {
+    return $http.get('http://localhost:3000/organizations/' + id)
+  };
 
-
-
-  // service.createOrganization = function(data) {
-  //   return $http({ method: 'POST', url: '/organizations'})
-  // }
-
-  service.createOrganization = function(data) {
+  this.createOrganization = function(data) {
     $http.post('http://localhost:3000/organizations', data)
-  }
+  };
 
-  return service;
 
 }
 
