@@ -6,7 +6,6 @@ function OrganizationService($http) {
     return $http({method: 'GET', url: '/organizations'})
   }
 
-  return service;
 
 
   service.createOrganization = function(data) {
