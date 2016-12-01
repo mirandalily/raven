@@ -9,9 +9,11 @@ function OrganizationService($http) {
 
 
 
-  this.createOrganization = function(data) {
-    $http.post('http://localhost:3000/organizations', data).then(console.log("successfully created new organization"))
+  service.createOrganization = function(data) {
+    return $http({method: 'POST', url: '/organizations'})
   }
+
+  return service;
 
 }
 
