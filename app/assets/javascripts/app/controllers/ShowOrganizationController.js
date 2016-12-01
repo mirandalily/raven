@@ -7,6 +7,7 @@ function ShowOrganizationController($stateParams, $state, Auth, OrganizationServ
   });
 
   OrganizationService.getOrganization($stateParams.id).then(function(resp){
+    console.log(resp);
     ctrl.organization = resp.data;
   });
 
