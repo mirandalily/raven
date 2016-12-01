@@ -5,12 +5,12 @@ function OrganizationService($http) {
   service.getOrganizations = function() {
     return $http({method: 'GET', url: '/organizations'})
   }
+
   return service;
 
 
-
   service.createOrganization = function(data) {
-    return $http({method: 'POST', url: '/organizations'})
+    return $http({ method: 'POST', url: '/organizations'})
   }
 
   return service;
