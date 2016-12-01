@@ -1,4 +1,4 @@
-function NewOrganizationController(OrganizationService, $state, $location, Auth, $controller){
+function NewOrganizationController(OrganizationService, $state, $scope, Auth, $controller){
 
 	var ctrl = this;
 
@@ -9,10 +9,11 @@ function NewOrganizationController(OrganizationService, $state, $location, Auth,
   ctrl.addOrganization = function() {
 
         var data = {
-            name: this.name,
-            description: this.description,
-            address: this.address,
+            name: ctrl.organization.name,
+            description: ctrl.organization.description,
+            address: ctrl.organization.address,
         };
+        console.log(data)
 
         OrganizationService.createOrganization(data);
         $state.go('home.organizations');

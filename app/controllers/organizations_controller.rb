@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
 
-  before_filter :authenicate_user!, only: [:create, :update, :destroy]
+  # before_filter :authenicate_user!, only: [:create, :update, :destroy]
 
   def index
     @organizations = Organization.all

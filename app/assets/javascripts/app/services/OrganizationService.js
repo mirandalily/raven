@@ -8,8 +8,12 @@ function OrganizationService($http) {
 
 
 
+  // service.createOrganization = function(data) {
+  //   return $http({ method: 'POST', url: '/organizations'})
+  // }
+
   service.createOrganization = function(data) {
-    return $http({ method: 'POST', url: '/organizations'})
+    $http.post('http://localhost:3000/organizations', data)
   }
 
   return service;
