@@ -1,4 +1,4 @@
-function NewOrganizationController(OrganizationService, $state, $scope, Auth, $controller){
+function NewOrganizationController(OrganizationService, $stateParams, $state, $http, Auth){
 
 	var ctrl = this;
 
@@ -20,6 +20,7 @@ function NewOrganizationController(OrganizationService, $state, $scope, Auth, $c
       };
 
 }
+
 
 angular
   .module('app')
