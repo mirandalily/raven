@@ -22,8 +22,8 @@ angular
         templateUrl: 'organizations/_new.html',
         controller: 'NewOrganizationController as ctrl'
       })
-      .state('home.show', {
-        url: 'organization/:id',
+      .state('home.organization', {
+        url: 'organizations/:id',
         templateUrl: 'organizations/_show.html',
         controller: 'ShowOrganizationController as ctrl'
       })
