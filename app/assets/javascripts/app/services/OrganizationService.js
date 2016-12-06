@@ -5,13 +5,12 @@ function OrganizationService($http) {
   };
 
   this.getOrganization = function(id) {
-    return $http.get('http://localhost:3000/organization/' + id)
+    return $http.get('http://localhost:3000/organizations/' + id)
   };
 
   this.createOrganization = function(data) {
     $http.post('http://localhost:3000/organizations', data)
   };
-
 
 }
 

@@ -1,9 +1,8 @@
 
-function ShowOrganizationController($stateParams, $state, Auth, OrganizationService) {
+function ShowOrganizationController($stateParams, $http, $location, $state, Auth, OrganizationService) {
   console.log('ShowOrganizationController is working');
   console.log($stateParams);
   var ctrl = this;
-
 
   Auth.currentUser().then(function(user) {
     ctrl.user = user;
