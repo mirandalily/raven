@@ -1,4 +1,4 @@
-function OrganizationsController(organizations, OrganizationService, $location, $state, $stateParams, Auth, $controller) {
+function OrganizationsController(organizations, OrganizationService, $location, $state, $stateParams, Auth) {
   var ctrl = this;
 
   ctrl.signedIn = Auth.isAuthenticated;
@@ -10,6 +10,11 @@ function OrganizationsController(organizations, OrganizationService, $location, 
     .then(function(user) {
       ctrl.user = user;
     });
+
+    OrganizationService.getOrganizations()
+			.then(function(response) {
+				ctrl.organizations = response.data;
+			});
 }
 
 
