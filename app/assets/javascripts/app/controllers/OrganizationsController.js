@@ -11,10 +11,6 @@ function OrganizationsController(organizations, OrganizationService, $location, 
       ctrl.user = user;
     });
 
-    OrganizationService.getOrganizations()
-			.then(function(response) {
-				ctrl.organizations = response.data;
-			});
 }
 
 
