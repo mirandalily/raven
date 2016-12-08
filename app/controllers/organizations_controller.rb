@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
-
-  # before_filter :authenicate_user!, only: [:create, :update, :destroy]
+  before_action :find_organization, except: [:index, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @organizations = Organization.all
@@ -37,7 +37,11 @@ class OrganizationsController < ApplicationController
   private
 
   def organization_params
-    params.require(:organization).permit(:name, :description, :address)
+    params.require(:organization).permit(:id, :name, :description, :address, :donations, :volunteers, :user_id)
+  end
+
+  def find_organization
+  	@organization = Organization.find(params[:id])
   end
 
 end
