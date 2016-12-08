@@ -1,3 +1,7 @@
 class OrganizationSerializer < ActiveModel::Serializer
-  attributes :name, :description, :address, :volunteers
+  attributes :id, :name, :description, :address, :donations, :volunteers
+
+  belongs_to :category
+  belongs_to :user
+  
 end

@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :organizations
-  has_many :donations
+  has_many :organizations, foreign_key: 'user_id'
+
 end
