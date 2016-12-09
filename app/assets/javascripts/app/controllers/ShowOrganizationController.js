@@ -14,6 +14,10 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
       ctrl.organization = resp.data;
   });
 
+  ctrl.stringify = function(org) {
+			return JSON.stringify(org);
+		}
+
 
 }
 

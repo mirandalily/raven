@@ -7,6 +7,16 @@
         <h4>{{ ctrl.organization.address }}</h4>
         <h5>{{ ctrl.organization.description }}</h5>
 
+        <h4>Donations</h4>
+
+        {{ ctrl.organization.donations.name }}
+
+      	<ul class="list-group">
+      		<li class="list-group-item" ng-repeat="donation in organization">
+      			{{ donation.name }}
+      		</li>
+      	</ul>
+
         <button ng-if="ctrl.user.id === ctrl.organization.user_id" class="btn btn-primary" href="" ui-sref="home.edit({id: ctrl.organization.id})">Edit Organization</button>
         <button ng-if="ctrl.user.id === ctrl.organization.user_id" class="btn btn-primary" href="" ng-click="ctrl.deleteOrganization(ctrl.organization);">Delete Organization</button>
 

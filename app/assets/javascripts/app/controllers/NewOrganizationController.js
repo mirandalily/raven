@@ -8,7 +8,18 @@ function NewOrganizationController(OrganizationService, $stateParams, $state, $h
     ctrl.user = user;
   })
 
+  ctrl.addNewDonation = function() {
+    var newDonation = ctrl.donations.length+1;
+    ctrl.donations.push({name: ''});
+  };
+
+  ctrl.removeDonation = function() {
+      var lastItem = ctrl.donations.length-1;
+      ctrl.donations.splice(lastItem);
+    };
+
   ctrl.addOrganization = function() {
+    var donations = this.donations;
     var allDonations = [];
 
     for (var key in donations) {
@@ -28,16 +39,6 @@ function NewOrganizationController(OrganizationService, $stateParams, $state, $h
     OrganizationService.createOrganization(data);
     $state.go('home.organizations');
   };
-
-	ctrl.addNewDonation = function() {
-	  var newDonation = ctrl.donations.length+1;
-	  ctrl.donations.push({name: ''});
-  };
-
-  ctrl.removeDonation = function() {
-	    var lastItem = ctrl.donations.length-1;
-	    ctrl.donations.splice(lastItem);
-	  };
 
 }
 
