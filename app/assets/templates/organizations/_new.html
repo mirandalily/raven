@@ -16,8 +16,19 @@
 
           <div class='form-group'>
             <label>Organization Address</label>
-            <input name='name' type='text' class='form-control' ng-model='ctrl.organization.address' required='required'/>
+            <input name='address' type='text' class='form-control' ng-model='ctrl.organization.address' required='required'/>
           </div>
+
+          <div class='form-group'>
+            <label>Organization Donations Needed</label>
+            <fieldset data-ng-repeat='donation in ctrl.donations'>
+              <input class="form-control" type="text" ng-model="donation.name" placeholder="Enter donation" required>
+              <button class="btn btn-danger" type="button" ng-show="$last" ng-click="ctrl.removeDonation()">-</button>
+            </fieldset>
+            <button class="btn btn-success" type="button" ng-click="ctrl.addNewDonation()">Add Donation</button>
+          </div>
+
+
 
           <div class='form-group'>
             <button class='btn btn-primary' type='submit'>Create Organization</button>

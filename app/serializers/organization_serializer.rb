@@ -1,5 +1,5 @@
 class OrganizationSerializer < ActiveModel::Serializer
 
-  attributes :id, :name, :description, :address, :volunteers
+  attributes :id, :name, :description, :donations, :address, :volunteers
 
 end
