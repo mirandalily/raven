@@ -32,6 +32,11 @@ angular
         templateUrl: 'organizations/_edit.html',
         controller: 'EditOrganizationController as ctrl'
       })
+      .state('home.category', {
+					url: 'category/:id',
+					templateUrl: 'catgories/_category.html',
+					controller: 'CategoryController as ctrl'
+			})
       .state('home.login', {
         url: 'login',
         templateUrl: 'authorization/login.html',

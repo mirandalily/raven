@@ -4,7 +4,30 @@
     <h1><a href='#' ui-sref="home.showOrganization({id: organization.id})">{{ organization.name }}</a></h1>
     {{organization.description}}
     {{organization.address}}
-    
+
   </div>
+
+
+  <form class="navbar-form" role="search">
+    <div class="input-group add-on">
+      <input class="form-control" placeholder="Search any" ng-model="ctrl.search.$" type="text">
+    </div>
+  </form>
+
+  <div class="col-md-4">
+		<form class="navbar-form" role="search">
+		    <div class="input-group add-on">
+		      <input class="form-control" placeholder="Search by organization name" ng-model="ctrl.search.name" type="text">
+		    </div>
+		  </form>
+	</div>
+
+  <div class="col-md-4">
+		<form class="navbar-form" role="search">
+		    <div class="input-group add-on">
+		      <input class="form-control" placeholder="Search by donations" ng-model="ctrl.search.donations" type="text">
+		    </div>
+		  </form>
+	</div>
 
 </div>
