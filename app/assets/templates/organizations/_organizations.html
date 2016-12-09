@@ -1,4 +1,11 @@
 <div class='container'>
+  <label>Search Organizations: <input class="form-control" ng-model="searchText"></label>
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default" ng-click="typeFilter = {category: 'Animals'}">Animals</button>
+      <button type="button" class="btn btn-default" ng-click="typeFilter = {category: 'Women'}">Women</button>
+      <button type="button" class="btn btn-default" ng-click="typeFilter = {category: 'Veterans'}">Veterans</button>
+      <button type="button" class="btn btn-default" ng-click="typeFilter = {}">Filter Off</button>
+    </div>
   <h1>Organizations</h1>
   <div ng-repeat='organization in ctrl.organizations'>
     <h1><a href='#' ui-sref="home.showOrganization({id: organization.id})">{{ organization.name }}</a></h1>
@@ -7,27 +14,5 @@
 
   </div>
 
-
-  <form class="navbar-form" role="search">
-    <div class="input-group add-on">
-      <input class="form-control" placeholder="Search any" ng-model="ctrl.search.$" type="text">
-    </div>
-  </form>
-
-  <div class="col-md-4">
-		<form class="navbar-form" role="search">
-		    <div class="input-group add-on">
-		      <input class="form-control" placeholder="Search by organization name" ng-model="ctrl.search.name" type="text">
-		    </div>
-		  </form>
-	</div>
-
-  <div class="col-md-4">
-		<form class="navbar-form" role="search">
-		    <div class="input-group add-on">
-		      <input class="form-control" placeholder="Search by donations" ng-model="ctrl.search.donations" type="text">
-		    </div>
-		  </form>
-	</div>
 
 </div>
