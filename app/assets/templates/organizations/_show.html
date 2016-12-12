@@ -6,14 +6,12 @@
         <h1>{{ ctrl.organization.name }}</h1>
         <h4>{{ ctrl.organization.address }}</h4>
         <h5>{{ ctrl.organization.description }}</h5>
-
+        <h5>{{ ctrl.organization.donations }}</h5>
         <h4>Donations</h4>
 
-        {{ ctrl.organization.donations.name }}
-
       	<ul class="list-group">
-      		<li class="list-group-item" ng-repeat="donation in organization">
-      			{{ donation.name }}
+      		<li class="list-group-item" ng-repeat="donation in donations track by $index">
+      			{{ donation }}
       		</li>
       	</ul>
 

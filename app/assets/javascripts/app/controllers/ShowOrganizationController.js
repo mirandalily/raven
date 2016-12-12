@@ -1,6 +1,7 @@
 
 function ShowOrganizationController($stateParams, $http, $location, $state, Auth, OrganizationService) {
   console.log('ShowOrganizationController is working');
+
   console.log($stateParams);
   var ctrl = this;
 
@@ -10,14 +11,8 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
 
   OrganizationService.getOrganization($stateParams.id)
     .then(function(resp){
-    console.log(resp);
       ctrl.organization = resp.data;
   });
-
-  ctrl.stringify = function(org) {
-			return JSON.stringify(org);
-		}
-
 
 }
 

@@ -7,7 +7,7 @@
       <button type="button" class="btn btn-default" ng-click="typeFilter = {}">Filter Off</button>
     </div>
   <h1>Organizations</h1>
-  <div ng-repeat='organization in ctrl.organizations'>
+  <div ng-repeat='organization in ctrl.organizations | filter:typeFilter'>
     <h1><a href='#' ui-sref="home.showOrganization({id: organization.id})">{{ organization.name }}</a></h1>
     {{organization.description}}
     {{organization.address}}

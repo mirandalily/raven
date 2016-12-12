@@ -2,7 +2,7 @@ function NewOrganizationController(OrganizationService, $stateParams, $state, $h
 
 	var ctrl = this;
 
-  ctrl.donations = [{name: ''}, {name: ''}];
+  ctrl.donations = [{"name": ''}, {"name": ''}];
 
   Auth.currentUser().then(function(user) {
     ctrl.user = user;
@@ -34,7 +34,8 @@ function NewOrganizationController(OrganizationService, $stateParams, $state, $h
         address: ctrl.organization.address,
         donations: allDonations.join("/r/n")
     };
-    console.log(data)
+    console.log(allDonations)
+
 
     OrganizationService.createOrganization(data);
     $state.go('home.organizations');

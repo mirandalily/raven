@@ -6,7 +6,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.boolean :volunteers
       t.string :address
       t.integer :user_id
-      t.string :donations, array: true
+      t.string :donations
       t.integer :category_id
 
       t.timestamps null: false

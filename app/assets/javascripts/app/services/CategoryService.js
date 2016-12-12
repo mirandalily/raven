@@ -8,3 +8,7 @@ function CategoryService($http) {
     return $http.get('http://localhost:3000/categories/' + id)
   };
 }
+
+angular
+	.module('app')
+	.service('CategoryService', CategoryService)
