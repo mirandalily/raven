@@ -22,6 +22,7 @@
    height: 50px;
    width: 50px;
    margin: 0 auto;
+   margin-top: 5%;
  }
 
  div#showinfo {
@@ -36,5 +37,21 @@
 
 div#showinfo h3, h4, h5 {
    padding-top: 10px;
+}
 
+.navbar-default{
+   border: 1px solid white;
+   text-align: center;
+}
+
+.navbar {
+   background: #464F5D;
+   a {
+      text-transform: uppercase;
+      color: white !important;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      letter-spacing: .5px;
+      font-size: 13px;
+   }
 }
