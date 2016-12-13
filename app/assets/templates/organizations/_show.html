@@ -2,14 +2,15 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
+        <div id="showinfo">
+          <h4>Name: </h4><h5>{{ ctrl.organization.name }}</h5>
+          <h4>Category: </h4><h5>{{ ctrl.organization.category.name }}</h5>
+          <h4>Location: </h4><h5>{{ ctrl.organization.address }}</h5>
+          <h4>Description: </h4><h5>{{ ctrl.organization.description }}</h5>
 
-        <h3>Name: {{ ctrl.organization.name }}</h1>
-        <h4>Category: {{ ctrl.organization.category.name }}</h1>
-        <h4>Location: {{ ctrl.organization.address }}</h4>
-        <h5>Description: {{ ctrl.organization.description }}</h5>
-
-        <h4>Donations Needed:</h4>
-        <h5>{{ ctrl.organization.donations }}</h5>
+          <h4>Donations Needed:</h4>
+          <h5>{{ ctrl.organization.donations }}</h5>
+        </div>
 
         <!-- <h4>Donations Needed (loop through):</h4>
       	<ul class="list-group">
