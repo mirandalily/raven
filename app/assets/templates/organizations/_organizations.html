@@ -5,8 +5,21 @@
 		      <input class="form-control" placeholder="Search any" ng-model="ctrl.search.$" type="text">
 		    </div>
 		  </form>
+
+      <form class='search' role='search'>
+        <label>Filter Organizations By: </label>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" ng-click="typeFilter = {category: {name: 'Animals'}}">Animals</button>
+          <button type="button" class="btn btn-default" ng-click="typeFilter = {category: {name: 'Women'}}">Women</button>
+          <button type="button" class="btn btn-default" ng-click="typeFilter = {category: {name: 'Veterans'}}">Veterans</button>
+          <button type="button" class="btn btn-default" ng-click="typeFilter = {}">Filter Off</button>
+        </div>
+
+      </form>
+
+
   <h1>Organizations</h1>
-  <div ng-repeat='organization in ctrl.organizations | filter: ctrl.search'>
+  <div ng-repeat='organization in ctrl.organizations | filter: ctrl.search | orderBy: "name" | filter:typeFilter'>
     <h1><a href='#' ui-sref="home.showOrganization({id: organization.id})">{{ organization.name }}</a></h1>
     {{organization.description}}
     {{organization.address}}
