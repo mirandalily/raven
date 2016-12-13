@@ -7,14 +7,16 @@
         <h1>{{ ctrl.organization.category.name }}</h1>
         <h4>{{ ctrl.organization.address }}</h4>
         <h5>{{ ctrl.organization.description }}</h5>
-        <h5>{{ ctrl.organization.donations }}</h5>
-        <h4>Donations</h4>
 
+        <h4>Donations Needed:</h4>
+        <h5>{{ ctrl.organization.donations }}</h5>
+
+        <!-- <h4>Donations Needed (loop through):</h4>
       	<ul class="list-group">
-      		<li class="list-group-item" ng-repeat="donation in donations track by $index">
+      		<li class="list-group-item" ng-repeat="donation in ctrl.organization.donations track by $index">
       			{{ donation }}
       		</li>
-      	</ul>
+      	</ul> -->
 
       </div>
     </div>
