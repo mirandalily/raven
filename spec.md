@@ -13,7 +13,7 @@ Specs:
 	- Users can create new recipes using the new recipes form.
 - [x] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
 	- Links in the navbar and recipe pages use ui-sref and work properly.
-- [] Data should be validated in Angular before submission
+- [x] Data should be validated in Angular before submission
 	- Data in the new recipe form are validated before submission using ng-show and error messages dynamically.
 - [x] Must talk to the Rails backend using $http and Services
 	- The app has a RecipeService and Userservice that gets and posts to the Rails backend.
