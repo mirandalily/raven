@@ -1,8 +1,12 @@
-function NewOrganizationController(OrganizationService, $stateParams, $state, $http, Auth){
+function NewOrganizationController(OrganizationService, CategoryService, $stateParams, $state, $http, Auth){
 
 	var ctrl = this;
 
-  ctrl.donations = [{"name": ''}, {"name": ''}];
+  CategoryService.getCategories().then(function(resp) {
+    ctrl.categories = resp.data;
+  });
+
+  ctrl.donations = [{name: ''}, {name: ''}];
 
   Auth.currentUser().then(function(user) {
     ctrl.user = user;
@@ -32,9 +36,9 @@ function NewOrganizationController(OrganizationService, $stateParams, $state, $h
         name: ctrl.organization.name,
         description: ctrl.organization.description,
         address: ctrl.organization.address,
-        donations: allDonations.join("/r/n")
+        donations: allDonations.join("/r/n"),
+        category_id: this.category.id
     };
-    console.log(allDonations)
 
 
     OrganizationService.createOrganization(data);
