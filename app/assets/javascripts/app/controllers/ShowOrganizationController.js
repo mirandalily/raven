@@ -9,10 +9,13 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
     ctrl.user = user;
   });
 
+
   OrganizationService.getOrganization($stateParams.id)
     .then(function(resp){
       ctrl.organization = resp.data;
   });
+
+
 
 }
 
