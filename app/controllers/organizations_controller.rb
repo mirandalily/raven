@@ -32,6 +32,11 @@ class OrganizationsController < ApplicationController
     respond_with(Organization.destroy(params[:id]))
   end
 
+  def upvote
+	  organization = Organization.find(params[:id])
+	  organization.increment!(:upvotes)
+end
+
   private
 
   def organization_params
