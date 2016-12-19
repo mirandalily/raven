@@ -8,6 +8,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.integer :user_id
       t.string :donations
       t.integer :category_id
+      t.integer :upvotes
 
       t.timestamps null: false
     end

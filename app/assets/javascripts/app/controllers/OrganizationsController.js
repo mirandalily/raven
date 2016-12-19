@@ -11,6 +11,18 @@ function OrganizationsController(organizations, OrganizationService, $location, 
       ctrl.user = user;
     });
 
+ctrl.organizations.forEach(function(organization){
+  organization.upvote = [];
+});
+
+
+  ctrl.upvoteOrganization = function(organization) {
+    organization.upvote.push("1");
+    organization.count = organization.upvote.length;
+  }
+
+
+
 }
 
 
