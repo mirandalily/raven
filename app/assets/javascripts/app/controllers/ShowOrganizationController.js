@@ -15,7 +15,17 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
       ctrl.organization = resp.data;
   });
 
+  ctrl.comment = new CommentService();
 
+  ctrl.addComment = function(orgnazation) {
+    if (ctrl.user) {
+      ctrl.comment.user_id = ctrl.user.id
+    }
+    ctrl.comment.organization_id = organization.id
+    ctrl.comment.$save(function() {
+      $state.go($state.current, {}, { reload: true });
+    });
+  }
 
 }
 
