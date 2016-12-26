@@ -15,10 +15,7 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
       ctrl.organization = resp.data;
   });
 
-  CommentService.getComments($stateParams.id)
-    .then(function(resp) {
-      ctrl.comments = resp.data;
-    });
+  ctrl.comment = new CommentService();
 
   ctrl.addComment = function(organization) {
     if (ctrl.user) {

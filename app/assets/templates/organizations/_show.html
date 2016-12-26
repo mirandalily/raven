@@ -12,6 +12,8 @@
           <h5>{{ ctrl.organization.donations }}</h5>
         </div>
 
+        <p ng-repeat="comment in ctrl.organization.comments"> {{ comment.body }} </p>
+
         <form ng-submit="ctrl.addComment(ctrl.organization)">
           <h4>Add a comment:</h4>
           <div class='form-group'>
