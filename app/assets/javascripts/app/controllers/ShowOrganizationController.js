@@ -1,5 +1,5 @@
 
-function ShowOrganizationController($stateParams, $http, $location, $state, Auth, OrganizationService) {
+function ShowOrganizationController($stateParams, $http, $location, $state, Auth, OrganizationService, CommentService) {
   console.log('ShowOrganizationController is working');
 
   console.log($stateParams);
@@ -15,9 +15,12 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
       ctrl.organization = resp.data;
   });
 
-  ctrl.comment = new CommentService();
+  CommentService.getComments($stateParams.id)
+    .then(function(resp) {
+      ctrl.comments = resp.data;
+    });
 
-  ctrl.addComment = function(orgnazation) {
+  ctrl.addComment = function(organization) {
     if (ctrl.user) {
       ctrl.comment.user_id = ctrl.user.id
     }
