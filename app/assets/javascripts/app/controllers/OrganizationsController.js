@@ -4,24 +4,15 @@ function OrganizationsController(organizations, OrganizationService, $location, 
   ctrl.signedIn = Auth.isAuthenticated;
 
   ctrl.organizations = organizations.data;
-  console.log(ctrl.organizations);
 
   Auth.currentUser()
     .then(function(user) {
       ctrl.user = user;
     });
 
-ctrl.organizations.forEach(function(organization){
-  organization.upvote = [];
-});
-
-
-  ctrl.upvoteOrganization = function(organization) {
-    organization.upvote.push("1");
-    organization.count = organization.upvote.length;
+  ctrl.addUpvote = function(organization) {
+    organization.upvotes += 1;
   }
-
-
 
 }
 

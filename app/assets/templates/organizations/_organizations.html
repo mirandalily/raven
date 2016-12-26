@@ -23,11 +23,11 @@
     <h2><a href='#' ui-sref="home.showOrganization({id: organization.id})">{{ organization.name }}</a></h2>
     <h5>Location: {{organization.address}}</h5>
     <div class='upvote'>
-      <button type="button" class="upvotebutton" ng-click="ctrl.upvoteOrganization(organization)">+1</button>
+      <button type="button" class="upvotebutton" ng-click="ctrl.addUpvote(organization)">+1</button>
     </div>
 
     <div class="counter">
-      Counter: {{organization.count}}
+      Upvotes: {{organization.upvotes}}
     </div>
 
   </div>
