@@ -11,7 +11,10 @@ function OrganizationsController(organizations, OrganizationService, $location, 
     });
 
   ctrl.addUpvote = function(organization) {
-    organization.upvotes += 1;
+    organization.upvotes ++
+    OrganizationService.update(organization).success(function(resp) {
+      console.log('added upvote');
+    })
   }
 
 }

@@ -12,6 +12,10 @@ function OrganizationService($http) {
     $http.post('http://localhost:3000/organizations', data)
   };
 
+  this.update = function(organization) {
+    $http.put('http://localhost:3000/organizations/' + organization.id, organization)
+  }
+
 }
 
 angular
