@@ -23,6 +23,7 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
     }
     ctrl.comment.organization_id = organization.id
     ctrl.comment.$save(function() {
+      // $state.reload();
       $state.go($state.current, {}, { reload: true });
     });
   }
