@@ -40,10 +40,15 @@ div#showinfo h3, h4, h5 {
 }
 
 .navbar-default{
-   border: 1px solid white;
-   text-align: center;
+   // border: 1px solid white;
+   // text-align: center;
    background: #464F5D;
-
+   width: 150px;
+   float: left;
+   display: inline;
+   margin: 0;
+   padding: 0;
+   margin-right: 10px;
 }
 
 .navbar a {
@@ -117,7 +122,7 @@ div#showinfo h3, h4, h5 {
 .introtitle{
    font-family: 'Lato', sans-serif;
    font-weight: 300;
-   font-size: 36pt;
+   font-size: 36px;
    letter-spacing: 7.35pt;
    text-align: center;
    margin: 0 auto;
@@ -128,7 +133,7 @@ div#showinfo h3, h4, h5 {
 .intro {
    font-family: 'Lato', sans-serif;
    font-weight: 300;
-   font-size: 13pt;
+   font-size: 17px;
    letter-spacing: 2pt;
    text-align: center;
    width: 500px;
@@ -143,4 +148,13 @@ div#showinfo h3, h4, h5 {
    display: block;
    margin: 0 auto;
    margin-top: 10%;
+}
+
+.loginsignup h2{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   letter-spacing: 2pt;
+   text-align: center;
+   margin-top: 3%;
 }
