@@ -13,7 +13,7 @@ function AuthController($scope, $state, Auth) {
     Auth.register($scope.user).then(function (success){
       $state.go('home.organizations');
     }, function (response){
-      var error = "Please ensure all items are filled in";
+      var error = "Looks like that email is already in use!";
       alert(error);
     });
   };

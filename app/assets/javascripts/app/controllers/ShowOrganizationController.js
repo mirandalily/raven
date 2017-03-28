@@ -2,7 +2,6 @@
 function ShowOrganizationController($stateParams, $http, $location, $state, Auth, OrganizationService, CommentService) {
   console.log('ShowOrganizationController is working');
 
-  console.log($stateParams);
   var ctrl = this;
 
   Auth.currentUser().then(function(user) {
@@ -23,8 +22,10 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
     }
     ctrl.comment.organization_id = organization.id
     ctrl.comment.$save(function() {
-      // $state.reload();
-      $state.go($state.current, {}, { reload: true });
+      ctrl.organization.comments = ctrl.comment.comments
+      console.log(ctrl.organization.comments)
+      // $state.reload(); doesn't load content without refreshing page entirely
+      ctrl.organization.comments.push(ctrl.comment);
     });
   }
 
