@@ -234,3 +234,30 @@ div#showinfo h3, h4, h5 {
    background: #59aad8;
    border: none;
 }
+
+//Login and Register Pages
+
+.login, .register {
+   margin-left: 11%;
+}
+
+.login h2, .register h2 {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+
+}
+
+.login h2{
+   margin-top: 40%;
+   margin-bottom: 10%;
+}
+
+.register h2 {
+   margin-top: 40%;
+   margin-bottom: 10%;
+}
