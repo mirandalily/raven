@@ -1,9 +1,9 @@
 
 <div ui-view>
 
-  <div id="introinfo">
+  <div class="introinfo">
 
-    <div id="welcomeimage"
+    <div id="welcomeimage">
       <img class="homeraven" />
     </div>
 
@@ -12,10 +12,12 @@
     <p class="intro">
       Raven is a web app built for the altruistic human. Here you can discover non profit organizations in need of donations (monetary and not), or volunteers. Filter your searches by location and causes and start helping out your community today - whether it be local or global!
     </p>
+
+
+
+
+    <div class="text-center loginsignup" ng-hide="signedIn();">
+      <h2>Please <a href ui-sref="home.register">Register</a> or <a href ui-sref="home.login">Log In</a></h2>
+    </div>
   </div>
-
-</div>
-
-<div class="text-center loginsignup" ng-hide="signedIn();">
-  <h2>Please <a href ui-sref="home.register">Register</a> or <a href ui-sref="home.login">Log In</a></h2>
 </div>
