@@ -25,6 +25,12 @@
  //   margin-top: 5%;
  // }
 
+ html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
  div#showinfo {
    font-family: 'Lato', sans-serif;
    font-weight: 300;
@@ -43,15 +49,17 @@ div#showinfo h3, h4, h5 {
    // border: 1px solid white;
    // text-align: center;
    background: #464F5D;
+   list-style-type: none;
    width: 150px;
-   float: left;
-   display: inline;
+   position: absolute;
+   height: 100%;
    margin: 0;
    padding: 0;
    margin-right: 10px;
 }
 
 .navbar a {
+   display: block;
    text-transform: uppercase;
    color: white !important;
    font-family: 'Lato', sans-serif;
@@ -147,7 +155,6 @@ div#showinfo h3, h4, h5 {
    width: 150px;
    display: block;
    margin: 0 auto;
-   margin-top: 10%;
    // the raven icon isn't centering due to the navbar being on the side now. need to fix
 }
 
