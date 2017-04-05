@@ -47,9 +47,7 @@ div#showinfo h3, h4, h5 {
 }
 
 .navbar-default{
-   // border: 1px solid white;
-   // text-align: center;
-   background: #464F5D;
+   background: #59aad8;
    list-style-type: none;
    width: 170px;
    position: absolute;
@@ -68,7 +66,7 @@ div#showinfo h3, h4, h5 {
    text-transform: uppercase;
    color: white !important;
    font-family: 'Lato', sans-serif;
-   font-weight: 300;
+   font-weight: 400;
    letter-spacing: 1px;
    font-size: 15px;
    margin-top: 40px;
@@ -166,7 +164,7 @@ div#showinfo h3, h4, h5 {
 
 .introinfo {
    padding-top: 8%;
-   margin-left: 12%;
+   margin-left: 11%;
 }
 
 .loginsignup h2{
@@ -176,4 +174,21 @@ div#showinfo h3, h4, h5 {
    letter-spacing: 2pt;
    text-align: center;
    margin-top: 3%;
+}
+
+//Organizations Page
+
+.organizations-index {
+   margin-left: 11%;
+}
+
+.organizations-index h1{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+   margin-top: 6%;
 }
