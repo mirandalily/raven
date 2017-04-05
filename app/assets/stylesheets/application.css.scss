@@ -31,6 +31,7 @@
     height: 100%;
 }
 
+
  div#showinfo {
    font-family: 'Lato', sans-serif;
    font-weight: 300;
@@ -50,12 +51,16 @@ div#showinfo h3, h4, h5 {
    // text-align: center;
    background: #464F5D;
    list-style-type: none;
-   width: 150px;
+   width: 170px;
    position: absolute;
    height: 100%;
    margin: 0;
    padding: 0;
    margin-right: 10px;
+}
+
+.navbar-nav {
+   margin-top: 65%;
 }
 
 .navbar a {
@@ -64,8 +69,9 @@ div#showinfo h3, h4, h5 {
    color: white !important;
    font-family: 'Lato', sans-serif;
    font-weight: 300;
-   letter-spacing: .5px;
-   font-size: 13px;
+   letter-spacing: 1px;
+   font-size: 15px;
+   margin-top: 40px;
 }
 
 .search-organizations {
@@ -154,8 +160,13 @@ div#showinfo h3, h4, h5 {
    height: 150px;
    width: 150px;
    display: block;
-   margin: 0 auto;
-   // the raven icon isn't centering due to the navbar being on the side now. need to fix
+   margin: auto;
+
+}
+
+#introinfo {
+   padding-top: 8%;
+   margin-left: -3%;
 }
 
 .loginsignup h2{
