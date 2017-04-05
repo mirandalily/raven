@@ -3,7 +3,7 @@
   <h1>Organizations</h1>
 
   <form class='search-categories'>
-    <label>Filter Organizations By: </label>
+    <label>Category : </label>
     <div class="btn-group filter-group">
       <button type="button" class="btn btn-default" ng-click="typeFilter = {category: {name: 'Animals'}}">Animals</button>
       <button type="button" class="btn btn-default" ng-click="typeFilter = {category: {name: 'Women'}}">Women</button>
@@ -14,7 +14,7 @@
 
   <form class="navbar-form">
     <div class="input-group search-organizations">
-      <label>Search Organizations: </label>
+      <label>Search : </label>
       <input class="form-control" ng-model="ctrl.search.$" type="text">
     </div>
 	</form>
@@ -22,12 +22,11 @@
   <div class='organizations-list' ng-repeat='organization in ctrl.organizations | filter: ctrl.search | orderBy: "name" | filter:typeFilter'>
     <h2><a href='#' ui-sref="home.showOrganization({id: organization.id})">{{ organization.name }}</a></h2>
     <h5>Location: {{organization.address}}</h5>
-    <div class='upvote'>
-      <button type="button" class="upvotebutton" ng-click="ctrl.addUpvote(organization)">+1</button>
-    </div>
-
     <div class="counter">
       Upvotes: {{organization.upvotes}}
+    </div>
+    <div class='upvote'>
+      <button type="button" class="upvotebutton" ng-click="ctrl.addUpvote(organization)">+1</button>
     </div>
 
   </div>

@@ -15,7 +15,7 @@
 @import 'bootstrap/bootstrap';
  */
 
- @import 'https://fonts.googleapis.com/css?family=Lato:300,400';
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 
  // div.logo {
  //   content:url('raven.png');
@@ -70,19 +70,6 @@ div#showinfo h3, h4, h5 {
    letter-spacing: 1px;
    font-size: 15px;
    margin-top: 40px;
-}
-
-.search-organizations {
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   margin-left: -13px;
-   margin-top: 2%;
-}
-
-.search-categories {
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   margin-top: 5%;
 }
 
 .btn-default {
@@ -191,4 +178,45 @@ div#showinfo h3, h4, h5 {
    margin: 0 auto;
    text-transform: uppercase;
    margin-top: 6%;
+}
+
+.organizations-index label {
+   font-family: 'Lato', sans-serif;
+   font-weight: 100;
+}
+
+.search-categories {
+   margin-left: 11%;
+   margin-top: 8%;
+}
+
+.search-organizations {
+   margin-left: 10%;
+   margin-top: 20px;
+}
+
+.organizations-list {
+   margin-left: 11%;
+   padding-top: 5%;
+   display: inline-block;
+}
+
+.organizations-list h2 {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 17px;
+   text-transform: uppercase;
+}
+
+.counter {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-bottom: 10px;
+}
+
+.upvote button {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   text-transform: uppercase;
+   font-size: 11px;
 }
