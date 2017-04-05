@@ -72,51 +72,6 @@ div#showinfo h3, h4, h5 {
    margin-top: 40px;
 }
 
-.btn-default {
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   text-transform: uppercase;
-   font-size: 11px;
-}
-
-.btn-group {
-   margin-left: 15px;
-}
-
-.organizations-index h1{
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   text-align: center;
-   margin-top: 6%;
-}
-
-.organizations-list h2{
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   margin-top: 3%;
-}
-
-.organizations-list h5{
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   margin-top: -1%;
-}
-
-.organizations-list {
-   margin-bottom: 5%;
-}
-
-.new-form {
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-}
-
-.new-form h1{
-   margin-top: 8%;
-   font-family: 'Lato', sans-serif;
-   font-weight: 300;
-   margin-bottom: 6%;
-}
 
 .introtitle{
    font-family: 'Lato', sans-serif;
@@ -180,6 +135,12 @@ div#showinfo h3, h4, h5 {
    margin-top: 6%;
 }
 
+.organizations-list h2{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-top: 3%;
+}
+
 .organizations-index label {
    font-family: 'Lato', sans-serif;
    font-weight: 100;
@@ -198,6 +159,7 @@ div#showinfo h3, h4, h5 {
 .organizations-list {
    margin-left: 11%;
    padding-top: 5%;
+   margin-bottom: 5%;
    display: inline-block;
 }
 
@@ -207,6 +169,13 @@ div#showinfo h3, h4, h5 {
    font-size: 17px;
    text-transform: uppercase;
 }
+
+.organizations-list h5{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-top: -1%;
+}
+
 
 .counter {
    font-family: 'Lato', sans-serif;
@@ -219,4 +188,49 @@ div#showinfo h3, h4, h5 {
    font-weight: 300;
    text-transform: uppercase;
    font-size: 11px;
+}
+
+.btn-default {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   text-transform: uppercase;
+   font-size: 11px;
+}
+
+.btn-group {
+   margin-left: 15px;
+}
+
+//Add Organization Form
+
+.new-form {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-left: 11%;
+}
+
+.new-form h1{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+   margin-top: 12%;
+   margin-bottom: 10%;
+}
+
+.new-form label {
+   font-family: 'Lato', sans-serif;
+   font-weight: 100;
+}
+
+.donationsneeded fieldset {
+   margin-bottom: 15px;
+}
+
+.create-btn {
+   background: #59aad8;
+   border: none;
 }
