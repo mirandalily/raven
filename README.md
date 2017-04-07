@@ -9,6 +9,8 @@ A simple Rails-Angular app that provides a place for non profit organizations to
 * `rake db:seed`
 * Then start local server using `rails s`
 
+If this is throwing any error messages for you, add `bundle exec` before commands.
+
 ## Contributions
 
 If you would like, you may contribute to this app by:
