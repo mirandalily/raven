@@ -11,16 +11,11 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
   OrganizationService.getOrganization($stateParams.id)
     .then(function(resp){
       ctrl.organization = resp.data;
-      console.log(ctrl.organization.donations);
-      console.log(ctrl.organization.comments)
+      console.log(ctrl.organization)
 
   });
 
   ctrl.comment = new CommentService();
-
-  ctrl.stringify = function(obj) {
-			return JSON.stringify(obj);
-		}
 
   ctrl.addComment = function(organization) {
     if (ctrl.user) {

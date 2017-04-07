@@ -4,18 +4,12 @@
       <div class="col-md-8 col-md-offset-2">
         <div id="showinfo">
           <h1>{{ ctrl.organization.name }}</h1>
-          <h4>Category: </h4><h5>{{ ctrl.organization.category.name }}</h5>
-          <h4>Location: </h4><h5>{{ ctrl.organization.address }}</h5>
-          <h4>Description: </h4><h5>{{ ctrl.organization.description }}</h5>
+          <h4>Category : </h4><h5>{{ ctrl.organization.category.name }}</h5>
+          <h4>Location : </h4><h5>{{ ctrl.organization.address }}</h5>
+          <h4>Description : </h4><h5>{{ ctrl.organization.description }}</h5>
 
-          <h4>Donations Needed:</h4>
-
-          <ol>
-            <li class="list-group-item" ng-repeat="donation in ctrl.organization.donations track by $index">
-              {{ donation }}
-            </li>
-          </ol>
-          <!-- <h5>{{ ctrl.organization.donations }}</h5> -->
+          <h4>Donations Needed :</h4>
+          <h5>{{ ctrl.organization.donations }}</h5>
 
         </div>
 

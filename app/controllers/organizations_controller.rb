@@ -35,7 +35,7 @@ class OrganizationsController < ApplicationController
   def upvote
 	  organization = Organization.find(params[:id])
 	  organization.increment!(:upvotes)
-end
+  end
 
   private
 
