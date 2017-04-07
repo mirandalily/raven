@@ -25,14 +25,14 @@
 
           <h4>Comments:</h4>
 
-          <p ng-repeat="comment in ctrl.organization.comments"> {{ comment.body }} </p>
+          <p ng-repeat="comment in ctrl.organization.comments"> {{comment.user.username}} says: {{ comment.body }} </p>
 
           <form ng-submit="ctrl.addComment(ctrl.organization)">
             <h4>Add a comment:</h4>
             <div class='form-group'>
               <input type='text' class='form-control' placeholder='Add Comment...' ng-model='ctrl.comment.body' />
             </div>
-            <button type="submit" class="btn btn-primary">Add Comment</button>
+            <button type="submit" class="btn btn-primary addcomment">Add Comment</button>
           </form>
         </div>
       </div>

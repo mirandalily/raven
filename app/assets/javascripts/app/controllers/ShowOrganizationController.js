@@ -12,6 +12,8 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
     .then(function(resp){
       ctrl.organization = resp.data;
       console.log(ctrl.organization.donations);
+      console.log(ctrl.organization.comments)
+
   });
 
   ctrl.comment = new CommentService();
@@ -28,7 +30,7 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
     ctrl.comment.$save(function() {
       ctrl.organization.comments = ctrl.comment.comments
       console.log(ctrl.organization.comments)
-      $state.reload(); 
+      $state.reload();
       ctrl.organization.comments.push(ctrl.comment);
     });
   }
