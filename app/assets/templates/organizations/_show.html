@@ -11,8 +11,8 @@
           <h4>Donations Needed:</h4>
 
           <ol>
-            <li class="list-group-item" ng-repeat="donation in organization">
-              {{ donation.text }}
+            <li class="list-group-item" ng-repeat="donation in ctrl.organization.donations track by $index">
+              {{ donation }}
             </li>
           </ol>
           <!-- <h5>{{ ctrl.organization.donations }}</h5> -->
