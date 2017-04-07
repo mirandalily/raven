@@ -1,0 +1,11 @@
+{
+  "name": "raven",
+  "dependencies": {
+    "angular": "v1.5.3",
+    "angular-ui-router" : "latest",
+    "angular-resource" : "v1.5.3",
+    "bootstrap" : "v3.3.6",
+    "angular-bootstrap" : "latest",
+    "angular-devise" : "latest"
+  }
+}

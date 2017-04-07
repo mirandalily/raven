@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+gem 'angular-rails-templates'
+gem 'bower-rails'
+gem 'active_model_serializers'
+gem 'devise'
+gem 'responders'

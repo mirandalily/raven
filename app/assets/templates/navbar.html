@@ -1,0 +1,12 @@
+<nav class='navbar navbar-default'>
+  <div ng-controller="NavController">
+    <ul class='nav navbar-nav'>
+      <li ui-sref-active="active"><a href="/">Home</a></li>
+      <li ui-sref-active="active"><a href="#/organizations">Organizations</a></li>
+      <li ng-show="signedIn()" ui-sref-active="active"><a href="#/organizations/new">Add Organization</a></li>
+      <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
+      <li ng-hide="signedIn()" ui-sref-active="active"><a href="#/register">Register</a></li>
+      <li ng-show="signedIn()" ui-sref-active="active"><a ng-click="logout()">Log Out</a></li>
+    </ul>
+  </div>
+</nav>

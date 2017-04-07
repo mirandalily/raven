@@ -1,0 +1,320 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap/dist/css/bootstrap
+@import 'ng-app/main';
+@import 'bootstrap/bootstrap';
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+
+ // div.logo {
+ //   content:url('raven.png');
+ //   height: 50px;
+ //   width: 50px;
+ //   margin: 0 auto;
+ //   margin-top: 5%;
+ // }
+
+ html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+body {
+    height:100%;
+    min-height: 100%;
+    position: relative;
+}
+
+footer {
+   bottom: 0;
+   height: 0px;
+   width: 100%;
+}
+.navbar-default{
+   background: #59aad8;
+   list-style-type: none;
+   width: 170px;
+   position: absolute;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   margin-right: 10px;
+   margin-bottom: -5000px;
+   padding-bottom: 5000px;
+   overflow: hidden;
+}
+
+.navbar-nav {
+   margin-top: 65%;
+}
+
+.navbar a {
+   display: block;
+   text-transform: uppercase;
+   color: white !important;
+   font-family: 'Lato', sans-serif;
+   font-weight: 400;
+   letter-spacing: 1px;
+   font-size: 15px;
+   margin-top: 40px;
+}
+
+
+.introtitle{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+   margin-top: 4%;
+}
+
+.intro {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 17px;
+   letter-spacing: 2pt;
+   text-align: center;
+   width: 500px;
+   margin: 0 auto;
+   margin-top: 3%;
+}
+
+.homeraven {
+   content:url('raven.png');
+   height: 120px;
+   width: 120px;
+   display: block;
+   margin: auto;
+
+}
+
+.introinfo {
+   padding-top: 8%;
+   margin-left: 11%;
+}
+
+.loginsignup h2{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   letter-spacing: 2pt;
+   text-align: center;
+   margin-top: 3%;
+}
+
+//Organizations Page
+
+.organizations-index {
+   margin-left: 11%;
+}
+
+.organizations-index h1{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+   margin-top: 6%;
+}
+
+.organizations-list h2{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-top: 3%;
+}
+
+.organizations-index label {
+   font-family: 'Lato', sans-serif;
+   font-weight: 100;
+}
+
+.search-categories {
+   margin-left: 11%;
+   margin-top: 8%;
+}
+
+.search-organizations {
+   margin-left: 10%;
+   margin-top: 20px;
+}
+
+.organizations-list {
+   margin-left: 11%;
+   padding-top: 5%;
+   margin-bottom: 5%;
+   display: inline-block;
+}
+
+.organizations-list h2 {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 17px;
+   text-transform: uppercase;
+}
+
+.organizations-list h5{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-top: -1%;
+}
+
+
+.counter {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-bottom: 10px;
+}
+
+.upvote button {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   text-transform: uppercase;
+   font-size: 11px;
+}
+
+.btn-default {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   text-transform: uppercase;
+   font-size: 11px;
+}
+
+.btn-group {
+   margin-left: 15px;
+}
+
+//Add Organization Form
+
+.new-form {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   margin-left: 11%;
+}
+
+.new-form h1{
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+   margin-top: 12%;
+   margin-bottom: 10%;
+}
+
+.new-form label {
+   font-family: 'Lato', sans-serif;
+   font-weight: 100;
+}
+
+.donationsneeded fieldset {
+   margin-bottom: 15px;
+}
+
+.create-btn, .addcomment {
+   background: #59aad8;
+   border: none;
+}
+
+//Login and Register Pages
+
+.login, .register {
+   margin-left: 11%;
+}
+
+.login h2, .register h2 {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+
+}
+
+.login h2{
+   margin-top: 40%;
+   margin-bottom: 10%;
+}
+
+.register h2 {
+   margin-top: 40%;
+   margin-bottom: 10%;
+}
+
+//Show Organization Page
+
+.showpage h4, h1, h5, .comments p {
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+
+}
+.showpage h1 {
+   font-size: 36px;
+   letter-spacing: 7.35pt;
+   text-align: center;
+   margin: 0 auto;
+   text-transform: uppercase;
+   margin-left: 11%;
+   margin-bottom: 20%;
+}
+
+.showpage h4 {
+   font-size: 17px;
+}
+
+.showpage h5 {
+   font-size: 14px;
+}
+
+div#showinfo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 15%;
+  margin-left: 11%;
+}
+
+div#showinfo h3, h4, h5 {
+  padding-top: 10px;
+}
+
+// Comments
+
+.comments {
+   margin-left: 11%;
+}
+
+.comments p {
+   border-bottom: 1px dashed #CCCCCC;
+   padding-bottom: 20px;
+   padding-top: 20px;
+}
+
+.addcomment {
+   margin-top: 25px;
+   margin-bottom: 45px;
+}
+
+.comments h4 {
+   margin-bottom: 15px;
+}
