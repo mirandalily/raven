@@ -9,7 +9,14 @@
           <h4>Description: </h4><h5>{{ ctrl.organization.description }}</h5>
 
           <h4>Donations Needed:</h4>
-          <h5>{{ ctrl.organization.donations }}</h5>
+
+          <ol>
+            <li class="list-group-item" ng-repeat="donation in organization">
+              {{ donation.text }}
+            </li>
+          </ol>
+          <!-- <h5>{{ ctrl.organization.donations }}</h5> -->
+
         </div>
 
         <br />

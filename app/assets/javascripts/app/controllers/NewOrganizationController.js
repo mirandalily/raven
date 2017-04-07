@@ -6,7 +6,7 @@ function NewOrganizationController(OrganizationService, CategoryService, $stateP
     ctrl.categories = resp.data;
   });
 
-  ctrl.donations = [{name: ''}, {name: ''}];
+  ctrl.donations = [{text: ''}];
 
   Auth.currentUser().then(function(user) {
     ctrl.user = user;
@@ -14,7 +14,7 @@ function NewOrganizationController(OrganizationService, CategoryService, $stateP
 
   ctrl.addNewDonation = function() {
     var newDonation = ctrl.donations.length+1;
-    ctrl.donations.push({name: ''});
+    ctrl.donations.push({text: ''});
   };
 
   ctrl.removeDonation = function() {
@@ -28,7 +28,7 @@ function NewOrganizationController(OrganizationService, CategoryService, $stateP
 
     for (var key in donations) {
       if (donations.hasOwnProperty(key)) {
-        var donation = donations[key].name;
+        var donation = donations[key].text;
         allDonations.push(donation);
       }
     }

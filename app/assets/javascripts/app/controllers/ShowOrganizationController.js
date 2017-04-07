@@ -1,7 +1,6 @@
 
 function ShowOrganizationController($stateParams, $http, $location, $state, Auth, OrganizationService, CommentService) {
   console.log('ShowOrganizationController is working');
-
   var ctrl = this;
 
   Auth.currentUser().then(function(user) {
@@ -12,9 +11,14 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
   OrganizationService.getOrganization($stateParams.id)
     .then(function(resp){
       ctrl.organization = resp.data;
+      console.log(ctrl.organization.donations);
   });
 
   ctrl.comment = new CommentService();
+
+  ctrl.stringify = function(obj) {
+			return JSON.stringify(obj);
+		}
 
   ctrl.addComment = function(organization) {
     if (ctrl.user) {
@@ -24,7 +28,7 @@ function ShowOrganizationController($stateParams, $http, $location, $state, Auth
     ctrl.comment.$save(function() {
       ctrl.organization.comments = ctrl.comment.comments
       console.log(ctrl.organization.comments)
-      // $state.reload(); doesn't load content without refreshing page entirely
+      $state.reload(); 
       ctrl.organization.comments.push(ctrl.comment);
     });
   }
