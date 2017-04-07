@@ -1,4 +1,4 @@
-function NewOrganizationController(OrganizationService, CategoryService, $stateParams, $state, $http, Auth){
+function NewOrganizationController(OrganizationService, CategoryService, $stateParams, $scope, $state, $http, Auth){
 
 	var ctrl = this;
 
@@ -6,24 +6,24 @@ function NewOrganizationController(OrganizationService, CategoryService, $stateP
     ctrl.categories = resp.data;
   });
 
-  ctrl.donations = [{text: ''}];
-
   Auth.currentUser().then(function(user) {
     ctrl.user = user;
   })
 
-  ctrl.addNewDonation = function() {
-    var newDonation = ctrl.donations.length+1;
-    ctrl.donations.push({text: ''});
-  };
+  ctrl.donations = [{}];
 
-  ctrl.removeDonation = function() {
-      var lastItem = ctrl.donations.length-1;
-      ctrl.donations.splice(lastItem);
+  ctrl.addDonation = function() {
+    	ctr.donations.push({});
+      console.log(ctrl.donations);
+    };
+
+  ctrl.remove = function(index) {
+    	$scope.donations.splice(index, 1);
     };
 
   ctrl.addOrganization = function() {
-    var donations = this.donations;
+
+    ctrl.donations = ctrl.organization.donations;
     var allDonations = [];
 
     for (var key in donations) {

@@ -21,14 +21,15 @@
 
           <div class='form-group donationsneeded'>
             <label for="donations">Donations Needed : </label>
-            <li data-ng-repeat="donation in ctrl.donations">
+            <li ng-repeat="donation in ctrl.donations">
               <fieldset>
-                <input class="form-control" type="text" ng-model="donation.text" placeholder="Enter donation" required>
+                <input class="form-control" type="text" ng-model="ctrl.donation[$index]" placeholder="Enter donation" required>
                 <button class="btn btn-danger" type="button" ng-show="$last" ng-click="ctrl.removeDonation()">-</button>
               </fieldset>
             </li>
             <button class="btn btn-success" type="button" ng-click="ctrl.addNewDonation()">Add Donation</button>
           </div>
+
 
           <div class="form-group">
 				    <label for="category">Category : </label>
