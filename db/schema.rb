@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20161219223538) do
   create_table "organizations", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.boolean  "volunteers"
     t.string   "address"
     t.integer  "user_id"
     t.string   "donations"

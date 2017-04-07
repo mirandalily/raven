@@ -3,7 +3,6 @@ class CreateOrganizations < ActiveRecord::Migration
     create_table :organizations do |t|
       t.string :name
       t.string :description
-      t.boolean :volunteers
       t.string :address
       t.integer :user_id
       t.string :donations
